@@ -1,0 +1,24 @@
+<!-- reporte.component.html -->
+
+<div *ngIf="informeData">
+    <h2>Reporte de Vuelos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Vuelo</th>
+          <th>Avión</th>
+          <th>Piloto</th>
+          <th>Fecha de Último Mantenimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vuelo of informeData">
+          <td>{{ vuelo.numeroVuelo }}</td>
+          <td>{{ vuelo.avion.codigo }} - {{ vuelo.avion.tipo }}</td>
+          <td>{{ vuelo.piloto.codigo }} - {{ vuelo.piloto.nombre }}</td>
+          <td>{{ vuelo.avion.fechaUltimoMantenimiento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
